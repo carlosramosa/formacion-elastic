@@ -17,6 +17,9 @@ const inicializar = () =>
         })
         .then(() =>
             console.log('##############################\nPOKEMONS INSERTADOS CON ÉXITO\n#############################')
+        )
+        .catch( e =>
+            console.log(e)
         );
 
 module.exports.inicializar = inicializar;

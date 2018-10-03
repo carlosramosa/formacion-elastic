@@ -3,4 +3,7 @@
 
 const { inicializar } = require('./elastic');
 
-inicializar();
+inicializar()
+    .then(() =>
+        process.exit(0)
+    );
