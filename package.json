@@ -1,0 +1,14 @@
+{
+  "name": "formacion-elastic",
+  "version": "1.0.0",
+  "description": "DIRECCIÓN DE CEREBRO http://localhost:9000",
+  "main": "index.js",
+  "scripts": {
+    "inicializarElastic": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "elasticsearch": "^15.1.1"
+  }
+}
