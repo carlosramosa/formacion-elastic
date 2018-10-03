@@ -1,35 +1,27 @@
 
 # PASO 1
 
-DIRECCIÓN DE CEREBRO
-http://localhost:9000
+Levantamos Cerebro y Elastic Search
 
-DIRECCIÓN DE ELASTIC SEARCH
-http://elasticsearch:9200
+```docker
+docker-compose -d
+```
 
 # PASO 2
 
-Ahora vamos a hacer un volcado de datos en nuestro elastic. 
-Para ello, primero, vamos a generar un mapping:
-```json
-PUT pokemon
-{
-    "settings" : {
-        "number_of_shards" : 1
-    },
-    "mappings": {
-        "doc": {
-            "properties": {
-                "id": {"type": "integer"},
-                "identifier": {"type": "keyword"},
-                "species_id": {"type": "integer"},
-                "height": {"type": "integer"},
-                "weight": {"type": "integer"},
-                "base_experience": {"type": "integer"},
-                "order": {"type": "integer"},
-                "is_default": {"type": "integer"}
-            }
-        }
-    }
-}
+Nos dirigimos a nuestro navegador favorito e introducimos la siguiente URL:
+```
+http://localhost:9000
+```
+
+A continuación, introducimos la siguiente URL en el apartado Node address:
+```
+http://elasticsearch:9200
+```
+
+# PASO 3
+
+Ejecutamos la siguiente instrucción para lanzar un script que genere un índice y lo rellene con documentos:
+```
+npm run inicializarElastic
 ```
