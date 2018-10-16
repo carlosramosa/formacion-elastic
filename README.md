@@ -4,7 +4,7 @@
 Levantamos Cerebro y Elastic Search
 
 ```docker
-docker-compose start -d
+docker-compose up -d
 ```
 
 # PASO 2
